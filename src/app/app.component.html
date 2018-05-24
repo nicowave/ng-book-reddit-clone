@@ -1,19 +1,36 @@
-<form class="ui large form segment">
-  <h3 class="ui header">Add a Link</h3>
 
+
+<form class="ui large form segment">
+  <h3 class="ui header">Add a post</h3>
+
+  <!-- post 'title' -->
   <div class="field">
     <label for="title">Title:</label>
-    <input name="title" id="title" #newtitle>  <!-- changed -->
+    <input name="title" 
+          id="title" 
+          #newtitle>  
   </div>
+     
+  <!-- post 'link' -->
   <div class="field">
     <label for="link">Link:</label>
-    <input name="link" id="link" #newlink> <!-- changed -->
+    <input name="link" 
+          id="link" 
+          #newlink> 
   </div>
 
-  <!-- added this button -->
-  <button (click)="addArticle(newtitle, newlink)"
+  <!-- post 'body' -->
+  <div class="field">
+    <label for="body">Body:</label>
+    <textarea name="body" 
+          id="body" 
+          #newbody></textarea>
+  </div>
+
+  <!-- 'submit' button -->
+  <button (click)="addArticle(newtitle, newlink, newbody)"
           class="ui positive right floated button">
-    Submit link
+    Submit
   </button>
 
 </form>
